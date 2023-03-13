@@ -121,9 +121,9 @@ class GeoFireCollectionRef {
             geoPointField = geoPointField[fieldList[i]];
           }
         }
-        final GeoPoint geoPoint = geoPointField['geopoint'];
-        distanceDocSnapshot.distance =
-            center.distance(lat: geoPoint.latitude, lng: geoPoint.longitude);
+//         final GeoPoint geoPoint = geoPointField['geopoint'];
+//         distanceDocSnapshot.distance = center.distance(lat: geoPoint.latitude, lng: geoPoint.longitude);
+        distanceDocSnapshot.distance = center.distance(lat: geoPointField['latitude'], lng: geoPointField['longitude']);
         return distanceDocSnapshot;
       });
 
